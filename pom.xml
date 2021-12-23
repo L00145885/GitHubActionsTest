@@ -62,4 +62,11 @@
 		</plugin>
   </plugins>
  </build>
+	<distributionManagement>
+	  <repository>
+	    <id>github</id>
+	    <name>Simple Application</name>
+	    <url>https://maven.pkg.github.com/simpleApp</url> 
+	  </repository>
+	</distributionManagement>
 </project>
