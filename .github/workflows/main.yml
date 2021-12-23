@@ -31,7 +31,7 @@ jobs:
           mkdir staging && cp target/*.jar staging
           
       - name: Step 4 - Publish to Github Packages
-        run: mvn -B clean deploy
+        run: mvn --batch-mode deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
