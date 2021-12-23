@@ -15,4 +15,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag l00145885/production:tagname
     - name: Push the Docker Image
-      run: docker login -u ijn35807 -p ${{ secrets.PRODUCTION }} && docker push l00145885/production:tagname
+      run: docker login -u l00145885 -p ${{ secrets.PRODUCTION }} && docker push l00145885/production:tagname
