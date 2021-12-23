@@ -30,17 +30,13 @@ jobs:
           mvn -B package --file pom.xml
           mkdir staging && cp target/*.jar staging
           
-      - name: Publish to Github Packages
-        run: mvn deploy -s $GITHUB_WORKSPACE
+      - name: Step 4 - Publish to Github Packages
+        run: mvn -B clean deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
-      - name: Step 4 - Upload Artifact
+      - name: Step 5 - Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
           name: github-actions-artifact
           path: staging
-      - name: Step 5 - Download Artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: github-actions-artifact
-      - name: Build Image
-        run: docker build . --file Dockerfile --tag image --build-arg JAR_FILE=$GITHUB_WORKSPACE/github-actions-artifact/*.jar 
