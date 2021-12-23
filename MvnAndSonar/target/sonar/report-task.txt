@@ -1,0 +1,6 @@
+projectKey=mvnSonar:MvnAndSonar
+serverUrl=http://localhost:9000
+serverVersion=9.2.0.49834
+dashboardUrl=http://localhost:9000/dashboard?id=mvnSonar%3AMvnAndSonar
+ceTaskId=AX1W1thYms5cnHC3ohmJ
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX1W1thYms5cnHC3ohmJ
