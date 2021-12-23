@@ -63,10 +63,10 @@
   </plugins>
  </build>
 	<distributionManagement>
-	  <repository>
-	    <id>github</id>
-	    <name>Simple Application</name>
-	    <url>https://maven.pkg.github.com/simpleApp</url> 
-	  </repository>
-	</distributionManagement>
+	    <repository>
+	      <id>github</id>
+	      <name>GitHub Packages</name>
+	      <url>https://maven.pkg.github.com/octocat/hello-world</url>
+	    </repository>
+	 </distributionManagement>
 </project>
