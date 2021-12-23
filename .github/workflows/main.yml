@@ -36,4 +36,4 @@ jobs:
           name: github-actions-artifact
           path: staging
       - name: Step 5 - Build Docker Image
-        run: docker build . --file DockerFile --tag image --build-arg JAR_FILE=$GITHUB_WORKSPACE/staging/*.jar 
+        run: docker build . --file Dockerfile --tag image --build-arg JAR_FILE=$GITHUB_WORKSPACE/staging/*.jar 
